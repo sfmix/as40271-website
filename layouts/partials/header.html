@@ -6,6 +6,9 @@
       <span class="brand__asn">{{ .Site.Params.asn }}</span>
       <span class="brand__host">· ip.sfmix.org</span>
     </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="site-nav">
       <ul>
         {{- range .Site.Menus.main }}
