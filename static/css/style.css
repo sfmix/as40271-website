@@ -207,7 +207,7 @@ pre code { background: transparent; color: inherit; padding: 0; }
   text-transform: uppercase; letter-spacing: 0.05em;
 }
 .source__tier { font-size: 0.72rem; color: var(--c-text-light); margin-left: auto; font-style: italic; }
-.source__badge { height: 32px; margin-left: auto; }
+.source__badge { height: 36px; flex-shrink: 0; }
 .source--featured { border-color: var(--c-accent); }
 
 /* ---------- CTA ---------- */
