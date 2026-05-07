@@ -18,13 +18,13 @@ AS40271 is opt-in for eyeball ISPs in the Bay Area. Here's who fits, what to exp
 
 We're built for **local eyeball networks**: residential, community, municipal and small-business ISPs whose users are in the San Francisco Bay Area. If most of your traffic is destined for end-users on consumer devices, you're our people.
 
-You'll need **a port at one of our cache POPs** (currently SCL02 and SJC01) and your own **public ASN with at least one prefix in IRR**. We'll BGP with you over IPv4 and IPv6.
+You'll need **a port at one of our edge sites** (see [locations on sfmix.org](https://sfmix.org/locations/)) and your own **public ASN with at least one prefix in IRR**. We'll BGP with you over IPv4 and IPv6.
 
 Content networks, transit providers and CDNs themselves should peer with SFMIX directly ([sfmix.org](https://sfmix.org)) — AS40271 is the wrong front door for you.
 
 ## What to expect
 
-We'll exchange a single eBGP session per address family. AS40271 announces the prefixes covered by our cache participants and Google's silver-tier peering range. You announce your customer prefixes back so the caches know where to deliver bytes.
+We'll exchange a single eBGP session per address family. AS40271 announces the prefixes covered by our cache and content-peering participants. You announce your customer prefixes back so the caches know where to deliver bytes.
 
 Expect **tens of percent** of your downstream bytes to land on AS40271 once it's hot — exact figures depend on your subscriber mix. Steam patch days will spike. Apple OS releases will spike. Set capacity accordingly.
 
