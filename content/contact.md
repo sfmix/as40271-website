@@ -1,6 +1,9 @@
 ---
 title: "Contact"
 description: "How to reach the humans who run AS40271."
+menu:
+  main:
+    weight: 40
 ---
 
 AS40271 is operated by SFMIX. There's no ticket system, no chatbot, no tier-1 escalation tree. Just real people on a mailing list.

@@ -2,15 +2,15 @@ baseURL      = "https://ip.sfmix.org/"
 languageCode = "en-us"
 title        = "AS40271 — SFMIX IP Network"
 
+# Match the main sfmix.org build pattern.
 enableRobotsTXT = true
 enableEmoji     = false
-disableKinds    = ["taxonomy", "term"]
 
 [params]
-  description  = "AS40271 — opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX."
-  asn          = "AS40271"
-  peeringdb    = "https://www.peeringdb.com/asn/40271"
-  parentSite   = "https://sfmix.org"
+  description = "AS40271 — opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX."
+  asn         = "AS40271"
+  peeringdb   = "https://www.peeringdb.com/asn/40271"
+  parentSite  = "https://sfmix.org"
   contactEmail = "tech-c@sfmix.org"
   nocPhone     = "+1 (415) 851-3469"
 

@@ -1,6 +1,9 @@
 ---
 title: "Connection Guide"
 description: "How eyeball ISPs opt in to AS40271, what to expect, and the honest caveats."
+menu:
+  main:
+    weight: 20
 ---
 
 {{< callout type="warn" title="Read this first" >}}

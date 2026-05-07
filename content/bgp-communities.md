@@ -1,6 +1,9 @@
 ---
 title: "BGP Communities"
 description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions."
+menu:
+  main:
+    weight: 30
 ---
 
 BGP communities used by AS40271. **Informational** communities are tagged on ingestion and never accepted from outside. **Action** communities are accepted from downstreams to control how routes propagate.
@@ -42,11 +45,15 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:1984:1` | SFO01 | 365 Main St., San Francisco |
-| `40271:1984:2` | SFO02 | 200 Paul Ave., San Francisco |
-| `40271:1984:3` | FMT01 | Fremont (Hurricane Electric) |
-| `40271:1984:4` | SJC01 | San Jose (Equinix SV1) |
-| `40271:1984:5` | SCL02 | Santa Clara (CoreSite) |
+| `40271:1984:0` | SFO01 | 365 Main St., San Francisco (Digital Realty) |
+| `40271:1984:1` | SFO02 | 200 Paul Ave., San Francisco (Digital Realty) |
+| `40271:1984:2` | FMT01 | 48233 Warm Springs Blvd., Fremont (Hurricane Electric) |
+| `40271:1984:3` | SJC01 | 11 Great Oaks Blvd., San Jose (Equinix SV1) |
+| `40271:1984:4` | SCL01 | 2807 Mission College Blvd., Santa Clara (QTS) |
+| `40271:1984:5` | SCL02 | 2972 Stender Way, Santa Clara (CoreSite) |
+| `40271:1984:6` | SCL04 | 3223 Kenneth St., Santa Clara (OpenColo) |
+| `40271:1984:7` | SJC02 | 55 S Market St., San Jose (CoreSite) |
+| `40271:1984:8` | SCL05 | 2805 Lafayette St., Santa Clara (Digital Realty) |
 
 ## Traffic Engineering
 
