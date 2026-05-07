@@ -1,30 +1,41 @@
-baseURL = 'https://ip.sfmix.org/'
-languageCode = 'en-us'
-title = 'AS40271 – SFMIX IP Network'
-disableKinds = ['taxonomy', 'term']
+baseURL      = "https://ip.sfmix.org/"
+languageCode = "en-us"
+title        = "AS40271 — SFMIX IP Network"
 
-[markup.goldmark.renderer]
-  unsafe = true
+enableRobotsTXT = true
+enableEmoji     = false
+disableKinds    = ["taxonomy", "term"]
 
 [params]
-  description = "AS40271 is the SFMIX IP Network — an opt-in cooperative delivering caching and content from major sources to local Bay Area eyeball ISPs via managed private peering."
-  tagline = "Caching & content for Bay Area networks"
-  email = "tech-c@sfmix.org"
-  phone = "+1 415 634-6712"
-  copyright_name = "San Francisco Metropolitan Internet eXchange"
-  peeringdb_url = "https://www.peeringdb.com/asn/40271"
+  description  = "AS40271 — opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX."
+  asn          = "AS40271"
+  peeringdb    = "https://www.peeringdb.com/asn/40271"
+  parentSite   = "https://sfmix.org"
+  contactEmail = "tech-c@sfmix.org"
+  nocPhone     = "+1 (415) 851-3469"
 
-[[menus.main]]
-  name = "Connection Guide"
-  url = "/connection-guide/"
-  weight = 10
+[menu]
+  [[menu.main]]
+    name   = "Home"
+    url    = "/"
+    weight = 10
+  [[menu.main]]
+    name   = "Connection Guide"
+    url    = "/connection-guide/"
+    weight = 20
+  [[menu.main]]
+    name   = "BGP Communities"
+    url    = "/bgp-communities/"
+    weight = 30
+  [[menu.main]]
+    name   = "Contact"
+    url    = "/contact/"
+    weight = 40
 
-[[menus.main]]
-  name = "BGP Communities"
-  url = "/bgp-communities/"
-  weight = 20
-
-[[menus.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 30
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3

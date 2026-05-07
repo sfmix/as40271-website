@@ -1,27 +1,23 @@
 ---
 title: "Contact"
-url: "/contact/"
+description: "How to reach the humans who run AS40271."
 ---
 
-## Get in Touch
+AS40271 is operated by SFMIX. There's no ticket system, no chatbot, no tier-1 escalation tree. Just real people on a mailing list.
 
-AS40271 is operated by the [San Francisco Metropolitan Internet eXchange](https://sfmix.org/) (SFMIX).
+## Reach us
 
-<div class="contact-methods">
-  <div class="contact-card">
-    <h3>Email</h3>
-    <a href="mailto:tech-c@sfmix.org">tech-c@sfmix.org</a>
-  </div>
-  <div class="contact-card">
-    <h3>Phone</h3>
-    <a href="tel:+14156346712">+1 415 634-6712</a>
-  </div>
-  <div class="contact-card">
-    <h3>PeeringDB</h3>
-    <a href="https://www.peeringdb.com/asn/40271" target="_blank" rel="noopener">AS40271</a>
-  </div>
-</div>
+- **Operations & peering** — [tech-c@sfmix.org](mailto:tech-c@sfmix.org)
+- **NOC phone** — +1 (415) 851-3469 *(for when something is on fire)*
+- **Mailing list** — [participants@sfmix.org](mailto:participants@sfmix.org) *(discussion among connected networks)*
+- **PeeringDB** — [AS40271](https://www.peeringdb.com/asn/40271)
 
-## Mailing List
+## Governance
 
-Join the SFMIX mailing list for announcements and discussion at [lists.sfmix.org](https://lists.sfmix.org/).
+SFMIX is an IRS 501(c)(12) cooperative. Network decisions — including which content sources to chase, where to put new caches, and how AS40271 evolves — are made by the operations team in conversation with connected participants. The mailing list is the room.
+
+## Mailing address
+
+San Francisco Metropolitan Internet eXchange
+PO Box 410307
+San Francisco, CA 94141

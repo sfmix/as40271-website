@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <div class="brand brand--footer">
+        <img src="{{ "img/sfmix-logo.png" | relURL }}" alt="SFMIX" class="brand__logo">
+        <span>{{ .Site.Params.asn }}</span>
+      </div>
+      <p>An opt-in caching cooperative for local eyeball ISPs, operated by SFMIX.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <ul>
+        {{- range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </div>
+    <div>
+      <h4>External</h4>
+      <ul>
+        <li><a href="{{ .Site.Params.peeringdb }}" target="_blank" rel="noopener">PeeringDB ↗</a></li>
+        <li><a href="{{ .Site.Params.parentSite }}" target="_blank" rel="noopener">sfmix.org ↗</a></li>
+        <li><a href="mailto:{{ .Site.Params.contactEmail }}">{{ .Site.Params.contactEmail }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__legal">
+    <span>© {{ now.Year }} San Francisco Metropolitan Internet eXchange · IRS 501(c)(12) cooperative</span>
+    <span>Part of <a href="{{ .Site.Params.parentSite }}">sfmix.org</a></span>
+  </div>
+</footer>

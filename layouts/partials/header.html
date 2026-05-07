@@ -1,0 +1,19 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <img src="{{ "img/sfmix-logo.png" | relURL }}" alt="SFMIX" class="brand__logo">
+      <span class="brand__sep"></span>
+      <span class="brand__asn">{{ .Site.Params.asn }}</span>
+      <span class="brand__host">· ip.sfmix.org</span>
+    </a>
+    <nav class="site-nav">
+      <ul>
+        {{- range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ .Name }}</a>
+        </li>
+        {{- end }}
+      </ul>
+    </nav>
+  </div>
+</header>

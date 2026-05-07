@@ -1,3 +1,6 @@
 ---
-title: "SFMIX IP Network – AS40271"
+title: "AS40271 — SFMIX IP Network"
+description: "Opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area."
 ---
+
+AS40271 is an opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area, operated by SFMIX.

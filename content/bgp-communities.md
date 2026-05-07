@@ -1,78 +1,85 @@
 ---
 title: "BGP Communities"
-url: "/bgp-communities/"
+description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions."
 ---
 
-## Overview
+BGP communities used by AS40271. **Informational** communities are tagged on ingestion and never accepted from outside. **Action** communities are accepted from downstreams to control how routes propagate.
 
-AS40271 uses BGP Large Communities exclusively. All communities use the format `40271:function:value`.
+## Informational
 
-Communities are divided into two categories: **informational** communities tagged on ingestion (not accepted from outside), and **traffic engineering** communities that downstream users can signal to control route propagation.
+Set by AS40271 on every route as it enters our network. Useful for diagnostics; ignore them on your side or filter on them as you like.
 
-## Informational Communities
+### Internal route marker
 
-These are tagged as routes are ingested and are **not accepted from outside**.
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:1500:1` | Internal | Originated within AS40271 (cache prefixes, infrastructure). |
 
-### Internal Routes
+### Peer Type ID — `40271:1900:*`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:1500:1` | SFMIX Transit Internal Infrastructure Routes |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:1900:1` | Transit | Learned from a paid transit upstream. |
+| `40271:1900:2` | Peer | Learned from a settlement-free peer. |
+| `40271:1900:3` | Customer | Learned from a downstream customer / participant. |
+| `40271:1900:4` | Internal | Learned via iBGP (originated by AS40271). |
 
-### Peer Type ID (`40271:1900:*`)
+### Peer ASN — `40271:1901:*`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:1900:0` | SFMIX (Transit) Infrastructure |
-| `40271:1900:1` | SFMIX Transit — Free — User |
-| `40271:1900:2` | SFMIX Transit — Paid — Upstream Transit |
-| `40271:1900:3` | SFMIX Transit — Free — Peers |
-| `40271:1900:4` | SFMIX Transit — Paid — User |
-| `40271:1900:5` | SFMIX Transit — Hosted Cache |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:1901:<asn>` | Origin neighbor ASN | The 16-bit neighbor ASN. Use the large-community equivalent for 4-byte ASNs. |
 
-### Peer ASN (`40271:1901:*`)
+### RPKI state — `40271:1902:*`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:1901:<peer ASN>` | Identifies the peer ASN the route was learned from |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:1902:1` | Valid | A covering ROA matched the route. |
+| `40271:1902:2` | Invalid | Covering ROA did not match. Route is dropped; community shown for completeness. |
+| `40271:1902:3` | NotFound / Unknown | No covering ROA exists. |
 
-### RPKI State (`40271:1902:*`)
+### Location ID — `40271:1984:*`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:1902:0` | RPKI Valid |
-| `40271:1902:1` | RPKI Unknown |
-| `40271:1902:2` | RPKI Invalid |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:1984:1` | SFO01 | 365 Main St., San Francisco |
+| `40271:1984:2` | SFO02 | 200 Paul Ave., San Francisco |
+| `40271:1984:3` | FMT01 | Fremont (Hurricane Electric) |
+| `40271:1984:4` | SJC01 | San Jose (Equinix SV1) |
+| `40271:1984:5` | SCL02 | Santa Clara (CoreSite) |
 
-### Location ID (`40271:1984:*`)
+## Traffic Engineering
 
-| Community | Description |
-|-----------|-------------|
-| `40271:1984:<site code>` | SFMIX site code where the route was learned (see [SFMIX Locations](https://sfmix.org/locations/)) |
+Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress.
 
-## Traffic Engineering Communities
+### Don't propagate to a specific ASN — `40271:2000:<asn>`
 
-These communities are **accepted from downstream users** and control route propagation scope.
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:2000:<asn>` | No-export to ASN | Replace `<asn>` with the 16-bit neighbor ASN you want to keep this prefix away from. |
 
-### Don't Propagate to ASN (`40271:2000:*`)
+### Don't propagate to a peer type — `40271:2001:*`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:2000:<peer ASN>` | Don't propagate to the specified peer ASN |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:2001:1` | No-export to transit | Will not be advertised to paid transit upstreams. |
+| `40271:2001:2` | No-export to peers | Will not be advertised to settlement-free peers. |
+| `40271:2001:3` | No-export to customers | Will not be advertised to downstream participants. |
 
-### Don't Propagate to Peer Type (`40271:2001:*`)
+### Edge blackhole — `40271:2666:666`
 
-| Community | Description |
-|-----------|-------------|
-| `40271:2001:0` | Don't propagate to SFMIX Transit Infrastructure |
-| `40271:2001:1` | Don't propagate to SFMIX Transit Free Users |
-| `40271:2001:2` | Don't propagate to SFMIX Transit Paid Upstream Transits |
-| `40271:2001:3` | Don't propagate to SFMIX Transit Free Peers |
-| `40271:2001:4` | Don't propagate to SFMIX Transit Paid Users |
-| `40271:2001:5` | Don't propagate to SFMIX Transit Hosted Caches |
+| Community | Name | Meaning |
+|---|---|---|
+| `40271:2666:666` | Blackhole | Discard ingress traffic toward this prefix at AS40271's edge. /32 (v4) or /128 (v6) only. |
 
-### Edge Blackhole (`40271:2666:*`)
+## Quick reference
 
-| Community | Description |
-|-----------|-------------|
-| `40271:2666:666` | Blackhole at edge |
+```
+# Suppress this prefix from being announced to AS15169
+ip community-list expanded NO-GOOG permit ^40271:2000:15169$
+
+# Blackhole an attacked /32
+route-map BLACKHOLE-OUT permit 10
+  match ip address prefix-list MY-V4-HOSTS
+  set community 40271:2666:666 additive
+```

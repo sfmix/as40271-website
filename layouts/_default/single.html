@@ -1,12 +1,13 @@
 {{ define "main" }}
 <div class="page-header">
   <div class="container">
+    <div class="page-header__kicker">{{ .Site.Params.asn }} · ip.sfmix.org</div>
     <h1>{{ .Title }}</h1>
   </div>
 </div>
-<div class="content">
-  <div class="container">
+<article class="content">
+  <div class="container container--narrow">
     {{ .Content }}
   </div>
-</div>
+</article>
 {{ end }}
