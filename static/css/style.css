@@ -158,9 +158,9 @@ pre code { background: transparent; color: inherit; padding: 0; }
 .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; align-items: start; }
 
 .card-list { background: #fff; border: 1px solid var(--c-border); border-radius: 10px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-.card-list__item { display: grid; grid-template-columns: 4px 1fr; gap: 0.85rem; }
-.card-list__item::before { content: ""; background: var(--c-accent); border-radius: 2px; }
-.card-list__item strong { display: block; color: var(--c-primary); margin-bottom: 2px; }
+.card-list__item { display: flex; gap: 0.85rem; }
+.card-list__bar { width: 4px; border-radius: 2px; background: var(--c-accent); flex-shrink: 0; }
+.card-list__item strong { display: block; font-weight: 600; color: var(--c-primary); margin-bottom: 2px; }
 .card-list__item span { display: block; font-size: 0.9rem; color: var(--c-text-light); line-height: 1.5; }
 
 /* ---------- Sources grid ---------- */
