@@ -109,7 +109,7 @@ pre code { background: transparent; color: inherit; padding: 0; }
   overflow: hidden;
 }
 .hero--photo {
-  background: linear-gradient(135deg, rgba(7,31,38,0.75) 0%, rgba(11,54,64,0.55) 60%, rgba(7,31,38,0.85) 100%), url('/img/rack-3006.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(7,31,38,0.75) 0%, rgba(11,54,64,0.55) 60%, rgba(7,31,38,0.85) 100%), url('/img/rack-3006.jpg') center top/cover no-repeat;
 }
 .hero__overlay {
   position: absolute; inset: 0;
