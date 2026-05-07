@@ -1,0 +1,30 @@
+baseURL = 'https://ip.sfmix.org/'
+languageCode = 'en-us'
+title = 'AS40271 – SFMIX IP Network'
+disableKinds = ['taxonomy', 'term']
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = "AS40271 is the SFMIX IP Network — an opt-in cooperative delivering caching and content from major sources to local Bay Area eyeball ISPs via managed private peering."
+  tagline = "Caching & content for Bay Area networks"
+  email = "tech-c@sfmix.org"
+  phone = "+1 415 634-6712"
+  copyright_name = "San Francisco Metropolitan Internet eXchange"
+  peeringdb_url = "https://www.peeringdb.com/asn/40271"
+
+[[menus.main]]
+  name = "Connection Guide"
+  url = "/connection-guide/"
+  weight = 10
+
+[[menus.main]]
+  name = "BGP Communities"
+  url = "/bgp-communities/"
+  weight = 20
+
+[[menus.main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 30

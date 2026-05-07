@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <h1>SFMIX IP Network</h1>
+    <p class="hero-subtitle">AS40271</p>
+    <p class="tagline">{{ .Site.Params.tagline }}</p>
+    <div class="hero-cta">
+      <a href="{{ "/connection-guide/" | relURL }}" class="btn btn-primary">Connect to AS40271</a>
+      <a href="{{ .Site.Params.peeringdb_url }}" class="btn btn-outline" target="_blank" rel="noopener">PeeringDB</a>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    <h2>What is AS40271?</h2>
+    <p>AS40271 is an opt-in cooperative delivering caching and content from major sources to local Bay Area eyeball ISPs. Rather than replacing your existing transit, AS40271 provides managed private peering with content networks — bringing popular content closer to your subscribers.</p>
+    <p>IP transit is technically available, but AS40271 is primarily built to support cache fill operations. It is <strong>not</strong> designed to be a sole-source transit replacement, and SFMIX cannot offer an SLA. Sole-sourcing your network's connectivity via SFMIX is risky and strongly discouraged.</p>
+
+    <h2>Available Content Sources</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Google <span class="badge">AS15169</span></h3>
+        <p>Monitored and managed private peering. SFMIX is a <strong>Google Silver Verified Peering Partner</strong> (VPP).</p>
+        <p class="card-detail">Peering at SJC01 &amp; SCL02</p>
+      </div>
+      <div class="card">
+        <h3>Apple Edge Cache <span class="badge">AS31128</span></h3>
+        <p>Apple content delivery via managed private peering.</p>
+      </div>
+      <div class="card">
+        <h3>Valve / Steam <span class="badge">AS32590</span></h3>
+        <p>Game content and update delivery cache.</p>
+        <p class="card-detail">Cache at SCL02</p>
+      </div>
+      <div class="card">
+        <h3>Netskrt</h3>
+        <p>Content delivery cache serving popular media.</p>
+        <p class="card-detail">Cache at SCL02</p>
+      </div>
+    </div>
+
+    <h2>Learn More</h2>
+    <p>Read the <a href="{{ "/connection-guide/" | relURL }}">Connection Guide</a> to learn how your network can opt in, or review the <a href="{{ "/bgp-communities/" | relURL }}">BGP Communities</a> reference.</p>
+  </div>
+</section>
+{{ end }}
