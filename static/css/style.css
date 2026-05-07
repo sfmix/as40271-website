@@ -175,8 +175,9 @@ pre code { background: transparent; color: inherit; padding: 0; }
 .card-list__item span { display: block; font-size: 0.9rem; color: var(--c-text-light); line-height: 1.5; }
 
 /* ---------- Sources grid ---------- */
-.sources { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+.sources { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center; }
 .source {
+  flex: 0 1 calc(33.333% - 1rem); min-width: 240px;
   background: #fff; border: 1px solid var(--c-border); border-top: 3px solid var(--c-accent);
   border-radius: 10px; padding: 1.5rem;
   display: flex; flex-direction: column; gap: 0.85rem;
@@ -201,7 +202,7 @@ pre code { background: transparent; color: inherit; padding: 0; }
 .source__name { font-size: 1.05rem; font-weight: 600; color: var(--c-primary); line-height: 1.2; }
 .source__asn  { font-family: var(--font-mono); font-size: 0.78rem; color: var(--c-text-light); margin-top: 2px; }
 .source__note { font-size: 0.85rem; color: var(--c-text); line-height: 1.5; margin: 0; }
-.source__meta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-top: auto; }
+.source__meta { display: flex; flex-wrap: wrap; gap: 0.3rem 0.4rem; align-items: center; margin-top: auto; }
 .pop {
   font-family: var(--font-mono); font-size: 0.72rem;
   color: var(--c-primary); background: rgba(11,54,64,0.07);
@@ -316,7 +317,8 @@ pre code { background: transparent; color: inherit; padding: 0; }
   .section--alt { padding: 2.5rem 0; }
   .section-title { font-size: 1.4rem; }
 
-  .sources { grid-template-columns: 1fr; }
+  .sources { flex-direction: column; }
+  .source { flex-basis: 100%; }
 
   .cta__inner { flex-direction: column; text-align: center; }
   .cta h2 { font-size: 1.3rem; }
