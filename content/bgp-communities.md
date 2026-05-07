@@ -6,7 +6,7 @@ menu:
     weight: 30
 ---
 
-BGP communities used by AS40271. **Informational** communities are tagged on ingestion and never accepted from outside. **Action** communities are accepted from downstreams to control how routes propagate.
+BGP communities used by AS40271. **[Informational](#informational)** communities are tagged on ingestion and never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate.
 
 ## Informational
 
@@ -55,7 +55,7 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 | `40271:1984:7` | SJC02 | 55 S Market St., San Jose (CoreSite) |
 | `40271:1984:8` | SCL05 | 2805 Lafayette St., Santa Clara (Digital Realty) |
 
-## Traffic Engineering
+## Action
 
 Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress.
 

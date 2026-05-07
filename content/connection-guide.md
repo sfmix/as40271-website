@@ -24,7 +24,7 @@ Content networks, transit providers and CDNs themselves should peer with SFMIX d
 
 ## What to expect
 
-We'll exchange a single eBGP session per address family. AS40271 announces the prefixes covered by our cache and content-peering participants. You announce your customer prefixes back so the caches know where to deliver bytes.
+We'll exchange a single eBGP session per address family. AS40271 announces the prefixes covered by our cache and content-peering participants. You announce your customer prefixes back so the caches know where to deliver bytes. See the [BGP communities reference](/bgp-communities/) for informational tags and action communities you can use.
 
 Expect **tens of percent** of your downstream bytes to land on AS40271 once it's hot — exact figures depend on your subscriber mix. Steam patch days will spike. Apple OS releases will spike. Set capacity accordingly.
 
