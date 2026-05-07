@@ -195,6 +195,8 @@ pre code { background: transparent; color: inherit; padding: 0; }
 .source__logo--google   { color: #4285F4; }
 .source__logo--apple    { color: #111; }
 .source__logo--steam    { color: #1b2838; }
+.source__logo--img { padding: 6px; object-fit: contain; }
+.source__logo--microsoft { color: #00A4EF; }
 .source__logo--netskrt  { color: #FF6B35; }
 .source__name { font-size: 1.05rem; font-weight: 600; color: var(--c-primary); line-height: 1.2; }
 .source__asn  { font-family: var(--font-mono); font-size: 0.78rem; color: var(--c-text-light); margin-top: 2px; }
@@ -207,6 +209,8 @@ pre code { background: transparent; color: inherit; padding: 0; }
   text-transform: uppercase; letter-spacing: 0.05em;
 }
 .source__tier { font-size: 0.72rem; color: var(--c-text-light); margin-left: auto; font-style: italic; }
+.source__link { font-size: 0.72rem; color: var(--c-accent); font-weight: 600; text-decoration: none; }
+.source__link:hover { text-decoration: underline; }
 .source__badge { height: 36px; flex-shrink: 0; }
 .source--featured { border-color: var(--c-accent); }
 
