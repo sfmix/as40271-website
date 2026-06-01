@@ -177,7 +177,10 @@ pre code { background: transparent; color: inherit; padding: 0; }
 .hero__stats {
   margin-top: 3.5rem; max-width: 720px;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem;
-  border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem;
+  padding: 1.25rem 1.5rem; border-radius: 12px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 .stat__v { display: block; font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: #fff; line-height: 1; }
 .stat__l { display: block; font-size: 0.75rem; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.35rem; }
@@ -348,6 +351,8 @@ pre code { background: transparent; color: inherit; padding: 0; }
   .hero__title { font-size: clamp(1.8rem, 8vw, 2.8rem); }
   .hero__inner { padding: 2.5rem 1rem; }
   .hero__stats { grid-template-columns: repeat(3, 1fr); }
+  .hero__stats > div { text-align: center; }
+  .hero__cta { flex-direction: column; align-items: stretch; }
 
   .two-col { grid-template-columns: 1fr; }
   .section { padding: 2.5rem 0; }
