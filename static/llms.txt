@@ -1,0 +1,26 @@
+# AS40271 — SFMIX IP Network
+
+> Opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX.
+
+## About
+
+AS40271 is a caching and content delivery cooperative run by SFMIX, an IRS 501(c)(12) Internet Exchange Point. Local eyeball ISPs peer with AS40271 and pull popular cacheable traffic — Google, Apple, Microsoft, Steam, Netskrt — directly off local caches instead of through transit providers.
+
+## Key Pages
+
+- [Home](https://ip.sfmix.org/): Overview, content sources, and pricing
+- [Connection Guide](https://ip.sfmix.org/connection-guide/): How to peer with AS40271
+- [BGP Communities](https://ip.sfmix.org/bgp-communities/): BGP community reference for traffic engineering
+- [Contact](https://ip.sfmix.org/contact/): How to reach us
+- [Privacy](https://ip.sfmix.org/privacy/): Privacy policy
+
+## Related
+
+- [SFMIX (parent org)](https://sfmix.org): San Francisco Metropolitan Internet eXchange
+- [PeeringDB](https://www.peeringdb.com/asn/40271): AS40271 on PeeringDB
+
+## Contact
+
+- Email: tech-c@sfmix.org
+- Phone: +1 (415) 851-3469
+- PeeringDB: https://www.peeringdb.com/asn/40271

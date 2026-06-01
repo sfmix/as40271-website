@@ -3,7 +3,7 @@ languageCode = "en-us"
 title        = "AS40271 — SFMIX IP Network"
 
 # Match the main sfmix.org build pattern.
-enableRobotsTXT = true
+enableRobotsTXT = false
 enableEmoji     = false
 
 [params]
