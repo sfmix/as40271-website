@@ -54,9 +54,6 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 | `40271:1984:6` | SCL04 | 3223 Kenneth St., Santa Clara (OpenColo) |
 | `40271:1984:7` | SJC02 | 55 S Market St., San Jose (CoreSite) |
 | `40271:1984:8` | SCL05 | 2805 Lafayette St., Santa Clara (Digital Realty) |
-| `40271:1984:9` | OAK01 | 720 2nd St., Oakland (Digital Realty) |
-| `40271:1984:10` | SNV01 | 1360 Kifer Rd., Sunnyvale (H5) |
-| `40271:1984:11` | SNV02 | 1380 Kifer Rd., Sunnyvale (Lumen) |
 
 ## Action
 
