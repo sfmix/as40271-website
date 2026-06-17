@@ -4,35 +4,32 @@
 <section class="section section--alt">
   <div class="container two-col">
     <div>
-      <div class="kicker">What &amp; why</div>
-      <h2 class="section-title">An off-net cache, run by people you can email.</h2>
+      <div class="kicker">{{ partial "T.html" "What &amp; why" | safeHTML }}</div>
+      <h2 class="section-title">{{ partial "T.html" "An off-net cache, run by people you can email." }}</h2>
       <p>
-        SFMIX runs caches for the big content sources at our exchange.
-        Local eyeball ISPs peer with <code>AS40271</code> and pull popular
-        traffic — Google, Apple, Microsoft, Steam, Netskrt — directly off the cache,
-        not from your transit provider.
+        {{ partial "T.html" "SFMIX runs caches for the big content sources at our exchange. Local eyeball ISPs peer with <code>AS40271</code> and pull popular traffic — Google, Apple, Microsoft, Steam, Netskrt — directly off the cache, not from your transit provider." | safeHTML }}
       </p>
     </div>
     <div class="card-list">
       <div class="card-list__item">
         <div class="card-list__bar"></div>
         <div>
-          <strong>Cheaper than transit</strong>
-          <span>Cacheable traffic stops counting against your 95th-percentile bill.</span>
+          <strong>{{ partial "T.html" "Cheaper than transit" }}</strong>
+          <span>{{ partial "T.html" "Cacheable traffic stops counting against your 95th-percentile bill." }}</span>
         </div>
       </div>
       <div class="card-list__item">
         <div class="card-list__bar"></div>
         <div>
-          <strong>Better for users</strong>
-          <span>Lower latency, fewer hops, fatter pipes for big downloads.</span>
+          <strong>{{ partial "T.html" "Better for users" }}</strong>
+          <span>{{ partial "T.html" "Lower latency, fewer hops, fatter pipes for big downloads." }}</span>
         </div>
       </div>
       <div class="card-list__item">
         <div class="card-list__bar"></div>
         <div>
-          <strong>Flat rate, no surprises</strong>
-          <span>$300/mo per 10 Gbps of capacity. Funds cover the router hardware, cross-connects, and power — we're a cooperative, not a profit center. Combinable up to Terrabit scale.</span>
+          <strong>{{ partial "T.html" "Flat rate, no surprises" }}</strong>
+          <span>{{ partial "T.html" "$300/mo per 10 Gbps of capacity. Funds cover the router hardware, cross-connects, and power — we're a cooperative, not a profit center. Combinable up to Terrabit scale." }}</span>
         </div>
       </div>
     </div>
@@ -42,9 +39,9 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="kicker">What's on it</div>
-      <h2 class="section-title">Current content sources</h2>
-      <p class="lead">Active caches &amp; private peering across our 9 Bay Area edge sites. More on the way as we shake hands with more content folks.</p>
+      <div class="kicker">{{ partial "T.html" "What's on it" }}</div>
+      <h2 class="section-title">{{ partial "T.html" "Current content sources" }}</h2>
+      <p class="lead">{{ partial "T.html" "Active caches &amp; private peering across our 9 Bay Area edge sites. More on the way as we shake hands with more content folks." | safeHTML }}</p>
     </div>
     {{- partial "sources.html" . -}}
   </div>
@@ -53,11 +50,10 @@
 <section class="cta">
   <div class="container cta__inner">
     <div>
-      <h2>Run an eyeball ISP in the Bay?</h2>
-      <p>Read the connection guide. Then send us an email. It really is that easy
-      (we promise the BGP part is the hardest bit).</p>
+      <h2>{{ partial "T.html" "Run an eyeball ISP in the Bay?" }}</h2>
+      <p>{{ partial "T.html" "Read the connection guide. Then send us an email. It really is that easy (we promise the BGP part is the hardest bit)." }}</p>
     </div>
-    <a class="btn btn--primary" href="/connection-guide/">Connection guide →</a>
+    <a class="btn btn--primary" href="{{ "/connection-guide/" | relLangURL }}">{{ partial "T.html" "Connection guide →" }}</a>
   </div>
 </section>
 {{ end }}

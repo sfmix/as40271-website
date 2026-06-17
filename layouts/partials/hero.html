@@ -3,26 +3,24 @@
   <div class="container hero__inner">
     <div class="hero__eyebrow">
       <span class="hero__dot"></span>
-      AS40271 · operated by SFMIX · 501(c)(12) cooperative
+      {{ partial "T.html" "AS40271 · operated by SFMIX · 501(c)(12) cooperative" }}
     </div>
     <h1 class="hero__title">
-      Local content,<br>
-      <span class="hero__title-accent">local pipes.</span>
+      {{ partial "T.html" "Local content," }}<br>
+      <span class="hero__title-accent">{{ partial "T.html" "local pipes." }}</span>
     </h1>
     <p class="hero__lead">
-      <strong>AS40271</strong> is an opt-in caching &amp; content cooperative for
-      local eyeball ISPs in the San Francisco Bay Area. We host the caches; you
-      save the transit bill.
+      {{ partial "T.html" "<strong>AS40271</strong> is an opt-in caching &amp; content cooperative for local eyeball ISPs in the San Francisco Bay Area. We host the caches; you save the transit bill." | safeHTML }}
     </p>
-    <p class="hero__tagline">Local, sustainable, organic … bits. Now with extra cache.</p>
+    <p class="hero__tagline">{{ partial "T.html" "Local, sustainable, organic … bits. Now with extra cache." }}</p>
     <div class="hero__cta">
-      <a class="btn btn--primary" href="/connection-guide/">Read the connection guide →</a>
+      <a class="btn btn--primary" href="{{ "/connection-guide/" | relLangURL }}">{{ partial "T.html" "Read the connection guide →" }}</a>
       <a class="btn btn--ghost" href="{{ .Site.Params.peeringdb }}" target="_blank" rel="noopener">PeeringDB ↗</a>
     </div>
     <div class="hero__stats">
-      <div><span class="stat__v">5</span><span class="stat__l">content sources</span></div>
-      <div><span class="stat__v">9</span><span class="stat__l">edge sites</span></div>
-      <div><span class="stat__v">$300/mo/10G</span><span class="stat__l">flat rate</span></div>
+      <div><span class="stat__v">5</span><span class="stat__l">{{ partial "T.html" "content sources" }}</span></div>
+      <div><span class="stat__v">9</span><span class="stat__l">{{ partial "T.html" "edge sites" }}</span></div>
+      <div><span class="stat__v">$300/mo/10G</span><span class="stat__l">{{ partial "T.html" "flat rate" }}</span></div>
     </div>
   </div>
 </section>

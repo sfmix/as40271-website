@@ -1,0 +1,106 @@
+# German (de) UI chrome catalog for AS40271 website.
+# gettext-style: English source string is the key (msgid); value is the German translation.
+
+"$300/mo per 10 Gbps of capacity. Funds cover the router hardware, cross-connects, and power — we're a cooperative, not a profit center. Combinable up to Terrabit scale." = "300 $/Monat pro 10 Gbit/s Kapazität. Die Beiträge decken Router-Hardware, Cross-Connects und Strom — wir sind eine Genossenschaft, kein Profitcenter. Bis in den Terabit-Bereich kombinierbar."
+
+"404 — Page not found" = "404 — Seite nicht gefunden"
+
+"Active caches &amp; private peering across our 9 Bay Area edge sites. More on the way as we shake hands with more content folks." = "Aktive Caches &amp; privates Peering an unseren 9 Edge-Standorten in der Bay Area. Weitere folgen, sobald wir uns mit mehr Content-Anbietern einig werden."
+
+"An off-net cache, run by people you can email." = "Ein Off-Net-Cache, betrieben von Menschen, die Sie per E-Mail erreichen."
+
+"An opt-in caching cooperative for local eyeball ISPs, operated by SFMIX." = "Eine Opt-in-Caching-Genossenschaft für lokale Eyeball-ISPs, betrieben von SFMIX."
+
+"AS40271 · operated by SFMIX · 501(c)(12) cooperative" = "AS40271 · betrieben von SFMIX · 501(c)(12)-Genossenschaft"
+
+"Back to the homepage" = "Zurück zur Startseite"
+
+"Better for users" = "Besser für die Endkunden"
+
+"BGP communities reference" = "BGP-Communities-Referenz"
+
+"Cacheable traffic stops counting against your 95th-percentile bill." = "Cachebarer Traffic zählt nicht mehr für Ihre 95-Perzentil-Abrechnung."
+
+"Change language" = "Sprache ändern"
+
+"Cheaper than transit" = "Günstiger als Transit"
+
+"Connected cache" = "Connected Cache"
+
+"Connection guide" = "Anschlussleitfaden"
+
+"Connection guide →" = "Anschlussleitfaden →"
+
+"Contact us" = "Kontaktieren Sie uns"
+
+"content sources" = "Content-Quellen"
+
+"Current content sources" = "Aktuelle Content-Quellen"
+
+"edge sites" = "Edge-Standorte"
+
+"External" = "Extern"
+
+"flat rate" = "Pauschaltarif"
+
+"Flat rate, no surprises" = "Pauschaltarif, keine Überraschungen"
+
+"iCloud, App Store, software updates, Apple TV+." = "iCloud, App Store, Software-Updates, Apple TV+."
+
+"Local content," = "Lokaler Content,"
+
+"local pipes." = "lokale Leitungen."
+
+"Local, sustainable, organic … bits. Now with extra cache." = "Lokale, nachhaltige, biologische … Bits. Jetzt mit extra Cache."
+
+"Lower latency, fewer hops, fatter pipes for big downloads." = "Geringere Latenz, weniger Hops, fettere Leitungen für große Downloads."
+
+"Menu" = "Menü"
+
+"Microsoft Connected Cache via Ninja-IX partnership. Xbox, Windows Update, Teams, Azure CDN." = "Microsoft Connected Cache über die Ninja-IX-Partnerschaft. Xbox, Windows Update, Teams, Azure CDN."
+
+"Pages" = "Seiten"
+
+"Part of" = "Teil von"
+
+"Privacy" = "Datenschutz"
+
+"Read the connection guide →" = "Lesen Sie den Anschlussleitfaden →"
+
+"Read the connection guide. Then send us an email. It really is that easy (we promise the BGP part is the hardest bit)." = "Lesen Sie den Anschlussleitfaden. Schreiben Sie uns dann eine E-Mail. So einfach ist das wirklich (wir versprechen, der BGP-Teil ist das Schwierigste)."
+
+"Run an eyeball ISP in the Bay?" = "Betreiben Sie einen Eyeball-ISP in der Bay Area?"
+
+"San Francisco Metropolitan Internet eXchange · IRS 501(c)(12) cooperative" = "San Francisco Metropolitan Internet eXchange · IRS-501(c)(12)-Genossenschaft"
+
+"SFMIX runs caches for the big content sources at our exchange. Local eyeball ISPs peer with <code>AS40271</code> and pull popular traffic — Google, Apple, Microsoft, Steam, Netskrt — directly off the cache, not from your transit provider." = "SFMIX betreibt an unserem Internetknoten Caches für die großen Content-Quellen. Lokale Eyeball-ISPs peeren mit <code>AS40271</code> und beziehen beliebten Traffic — Google, Apple, Microsoft, Steam, Netskrt — direkt aus dem Cache, nicht von Ihrem Transit-Provider."
+
+"Skip to main content" = "Zum Hauptinhalt springen"
+
+"Specialized streaming-video offload (Netflix, Disney+, etc.)." = "Spezialisiertes Streaming-Video-Offloading (Netflix, Disney+ usw.)."
+
+"Steam content cache" = "Steam-Content-Cache"
+
+"Steam game downloads &amp; updates." = "Steam-Spiele-Downloads &amp; -Updates."
+
+"Streaming edge cache" = "Streaming-Edge-Cache"
+
+"<strong>AS40271</strong> is an opt-in caching &amp; content cooperative for local eyeball ISPs in the San Francisco Bay Area. We host the caches; you save the transit bill." = "<strong>AS40271</strong> ist eine Opt-in-Caching- &amp; Content-Genossenschaft für lokale Eyeball-ISPs in der San Francisco Bay Area. Wir hosten die Caches; Sie sparen die Transit-Rechnung."
+
+"The page you're looking for doesn't exist or has been moved." = "Die gesuchte Seite existiert nicht oder wurde verschoben."
+
+"Verified Peering Provider since October 2024 — one of the first IXPs in the program. Serves Google Search, YouTube, Maps, and Workspace." = "Verified Peering Provider seit Oktober 2024 — einer der ersten IXPs im Programm. Bedient Google Suche, YouTube, Maps und Workspace."
+
+"VPP program ↗" = "VPP-Programm ↗"
+
+"What &amp; why" = "Was &amp; warum"
+
+"What's on it" = "Was darauf läuft"
+
+"Home" = "Startseite"
+
+"Connection Guide" = "Anschlussleitfaden"
+
+"BGP Communities" = "BGP-Communities"
+
+"Contact" = "Kontakt"

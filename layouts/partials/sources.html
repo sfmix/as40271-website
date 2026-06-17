@@ -1,17 +1,17 @@
 <div class="sources">
   <div class="source source--featured">
     <div class="source__head">
-      <img src="/img/google-vpp-silver-horizontal.png" alt="Google Verified Peering Provider — Silver" class="source__badge" width="141" height="36">
+      <img src="/img/google-vpp-silver-horizontal.png" alt="{{ partial "T.html" "Google Verified Peering Provider — Silver" }}" class="source__badge" width="141" height="36">
       <div>
         <div class="source__name">Google</div>
         <div class="source__asn">AS15169</div>
       </div>
     </div>
-    <p class="source__note">Verified Peering Provider since October 2024 — one of the first IXPs in the program. Serves Google Search, YouTube, Maps, and Workspace.</p>
+    <p class="source__note">{{ partial "T.html" "Verified Peering Provider since October 2024 — one of the first IXPs in the program. Serves Google Search, YouTube, Maps, and Workspace." }}</p>
     <div class="source__meta">
       <span class="pop">SJC01</span><span class="pop">SCL02</span>
-      <span class="source__tier">Verified Silver
-      <a href="https://docs.cloud.google.com/network-connectivity/docs/verified-peering-provider" class="source__link" target="_blank" rel="noopener">VPP program ↗</a></span>
+      <span class="source__tier">{{ partial "T.html" "Verified Silver" }}
+      <a href="https://docs.cloud.google.com/network-connectivity/docs/verified-peering-provider" class="source__link" target="_blank" rel="noopener">{{ partial "T.html" "VPP program ↗" }}</a></span>
     </div>
   </div>
   <div class="source">
@@ -22,10 +22,10 @@
         <div class="source__asn">AS31128</div>
       </div>
     </div>
-    <p class="source__note">iCloud, App Store, software updates, Apple TV+.</p>
+    <p class="source__note">{{ partial "T.html" "iCloud, App Store, software updates, Apple TV+." }}</p>
     <div class="source__meta">
       <span class="pop">SCL02</span>
-      <span class="source__tier">Participant
+      <span class="source__tier">{{ partial "T.html" "Participant" }}
       <a href="https://cache.edge.apple/" class="source__link" target="_blank" rel="noopener">Apple Edge Cache ↗</a></span>
     </div>
   </div>
@@ -37,10 +37,10 @@
         <div class="source__asn">AS12233</div>
       </div>
     </div>
-    <p class="source__note">Microsoft Connected Cache via Ninja-IX partnership. Xbox, Windows Update, Teams, Azure CDN.</p>
+    <p class="source__note">{{ partial "T.html" "Microsoft Connected Cache via Ninja-IX partnership. Xbox, Windows Update, Teams, Azure CDN." }}</p>
     <div class="source__meta">
       <span class="pop">FMT01</span>
-      <span class="source__tier">Connected cache
+      <span class="source__tier">{{ partial "T.html" "Connected cache" }}
       <a href="https://learn.microsoft.com/en-us/windows/deployment/do/waas-microsoft-connected-cache" class="source__link" target="_blank" rel="noopener">Ninja-IX ↗</a></span>
     </div>
   </div>
@@ -52,10 +52,10 @@
         <div class="source__asn">AS32590</div>
       </div>
     </div>
-    <p class="source__note">Steam game downloads &amp; updates.</p>
+    <p class="source__note">{{ partial "T.html" "Steam game downloads &amp; updates." | safeHTML }}</p>
     <div class="source__meta">
       <span class="pop">SCL02</span>
-      <span class="source__tier">Steam content cache</span>
+      <span class="source__tier">{{ partial "T.html" "Steam content cache" }}</span>
     </div>
   </div>
   <div class="source">
@@ -66,10 +66,10 @@
         <div class="source__asn">eCDN</div>
       </div>
     </div>
-    <p class="source__note">Specialized streaming-video offload (Netflix, Disney+, etc.).</p>
+    <p class="source__note">{{ partial "T.html" "Specialized streaming-video offload (Netflix, Disney+, etc.)." }}</p>
     <div class="source__meta">
       <span class="pop">SCL02</span>
-      <span class="source__tier">Streaming edge cache
+      <span class="source__tier">{{ partial "T.html" "Streaming edge cache" }}
       <a href="https://www.netskrt.io/" class="source__link" target="_blank" rel="noopener">Netskrt ↗</a></span>
     </div>
   </div>

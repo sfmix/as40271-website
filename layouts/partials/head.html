@@ -2,9 +2,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+{{/* Client-side language negotiation (GitHub Pages can't read Accept-Language).
+     External file so it complies with the script-src 'self' CSP — it reads the
+     translation map + current language from the <html> data-* attributes. */}}
+<script src="{{ "js/site.js" | relURL }}"></script>
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode | default .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
 <meta name="theme-color" content="#0b3640">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="{{ "img/favicon.svg" | relURL }}" type="image/svg+xml">

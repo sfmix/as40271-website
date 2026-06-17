@@ -1,13 +1,13 @@
 ---
 title: "BGP Communities"
-description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions."
+description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions. The full rundown."
 ---
 
-BGP communities used by AS40271. **[Informational](#informational)** communities are tagged on ingestion and never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate.
+BGP communities used by AS40271. **[Informational](#informational)** communities get tagged on ingestion and are never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate.
 
 ## Informational
 
-Set by AS40271 on every route as it enters our network. Useful for diagnostics; ignore them on your side or filter on them as you like.
+Set by AS40271 on every route as it enters our network. Clutch for diagnostics; ignore them on your side or filter on them however you like.
 
 ### Internal route marker
 
@@ -34,8 +34,8 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:1902:1` | Valid | A covering ROA matched the route. |
-| `40271:1902:2` | Invalid | Covering ROA did not match. Route is dropped; community shown for completeness. |
+| `40271:1902:1` | Valid | A covering ROA matched the route. Green flag. |
+| `40271:1902:2` | Invalid | Covering ROA didn't match. Route gets dropped; community shown for completeness. |
 | `40271:1902:3` | NotFound / Unknown | No covering ROA exists. |
 
 ### Location ID — `40271:1984:*`
@@ -54,7 +54,7 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 
 ## Action
 
-Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress.
+Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress, periodt.
 
 ### Don't propagate to a specific ASN — `40271:2000:<asn>`
 
@@ -66,9 +66,9 @@ Set these communities on routes you announce to AS40271 and we'll act on them. T
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:2001:1` | No-export to transit | Will not be advertised to paid transit upstreams. |
-| `40271:2001:2` | No-export to peers | Will not be advertised to settlement-free peers. |
-| `40271:2001:3` | No-export to customers | Will not be advertised to downstream participants. |
+| `40271:2001:1` | No-export to transit | Won't be advertised to paid transit upstreams. |
+| `40271:2001:2` | No-export to peers | Won't be advertised to settlement-free peers. |
+| `40271:2001:3` | No-export to customers | Won't be advertised to downstream participants. |
 
 ### Edge blackhole — `40271:2666:666`
 

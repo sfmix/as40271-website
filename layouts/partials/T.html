@@ -1,0 +1,18 @@
+{{- /*
+  T — gettext-style translation helper (same pattern as sfmix.org).
+
+  The English source string IS the key (the msgid). There is no en.toml:
+  English is the source, so authors write plain English in templates.
+  Translators fill i18n/<lang>.toml whose keys are the English sentences and
+  whose values are the translations (the .po "msgid -> msgstr" model). Any
+  string with no entry for the current language falls back to English.
+
+  Uses {{ return }} so the RAW string is handed back and the CALLER's context
+  decides escaping: plain text/attributes auto-escape; pipe through `safeHTML`
+  for strings that intentionally contain markup. (Emitting the value inside the
+  partial would HTML-escape it here, defeating a caller's safeHTML.)
+
+  Usage:  {{ partial "T.html" "Read the connection guide →" }}
+  HTML:   {{ partial "T.html" "Part of <a href=…>sfmix.org</a>" | safeHTML }}
+*/ -}}
+{{- return (or (i18n .) .) -}}

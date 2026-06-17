@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+{{- $trans := dict -}}
+{{- range .AllTranslations -}}{{- $trans = merge $trans (dict .Language.Lang .RelPermalink) -}}{{- end -}}
+<html lang="{{ .Site.Language.LanguageCode | default .Site.Language.Lang }}" data-lang="{{ .Site.Language.Lang }}" data-translations="{{ $trans | jsonify }}">
 <head>
   {{- partial "head.html" . -}}
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content">{{ partial "T.html" "Skip to main content" }}</a>
   {{- partial "header.html" . -}}
   <main id="main-content">
     {{- block "main" . -}}{{- end -}}

@@ -1,13 +1,13 @@
 ---
 title: "BGP Communities"
-description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions."
+description: "Reference for AS40271 BGP communities — informational tags an' traffic-engineering actions."
 ---
 
-BGP communities used by AS40271. **[Informational](#informational)** communities are tagged on ingestion and never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate.
+BGP communities used by AS40271. **[Informational](#informational)** communities be tagged on ingestion an' never accepted from outside. **[Action](#action)** communities be accepted from downstreams to control how routes propagate.
 
 ## Informational
 
-Set by AS40271 on every route as it enters our network. Useful for diagnostics; ignore them on your side or filter on them as you like.
+Set by AS40271 on every route as it enters our network. Useful for diagnostics; ignore them on yer side or filter on them as ye like.
 
 ### Internal route marker
 
@@ -28,15 +28,15 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:1901:<asn>` | Origin neighbor ASN | The 16-bit neighbor ASN. Use the large-community equivalent for 4-byte ASNs. |
+| `40271:1901:<asn>` | Origin neighbor ASN | Th' 16-bit neighbor ASN. Use th' large-community equivalent for 4-byte ASNs. |
 
 ### RPKI state — `40271:1902:*`
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:1902:1` | Valid | A covering ROA matched the route. |
-| `40271:1902:2` | Invalid | Covering ROA did not match. Route is dropped; community shown for completeness. |
-| `40271:1902:3` | NotFound / Unknown | No covering ROA exists. |
+| `40271:1902:1` | Valid | A coverin' ROA matched th' route. |
+| `40271:1902:2` | Invalid | Coverin' ROA did not match. Route be dropped; community shown for completeness. |
+| `40271:1902:3` | NotFound / Unknown | No coverin' ROA exists. |
 
 ### Location ID — `40271:1984:*`
 
@@ -54,13 +54,13 @@ Set by AS40271 on every route as it enters our network. Useful for diagnostics; 
 
 ## Action
 
-Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress.
+Set these communities on routes ye announce to AS40271 an' we'll act on them. These be th' only communities we honor on ingress.
 
 ### Don't propagate to a specific ASN — `40271:2000:<asn>`
 
 | Community | Name | Meaning |
 |---|---|---|
-| `40271:2000:<asn>` | No-export to ASN | Replace `<asn>` with the 16-bit neighbor ASN you want to keep this prefix away from. |
+| `40271:2000:<asn>` | No-export to ASN | Replace `<asn>` with th' 16-bit neighbor ASN ye want to keep this prefix away from. |
 
 ### Don't propagate to a peer type — `40271:2001:*`
 

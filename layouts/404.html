@@ -1,17 +1,17 @@
 {{ define "main" }}
 <div class="page-header">
   <div class="container">
-    <h1>404 — Page not found</h1>
+    <h1>{{ partial "T.html" "404 — Page not found" }}</h1>
   </div>
 </div>
 <article class="content">
   <div class="container container--narrow">
-    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <p>{{ partial "T.html" "The page you're looking for doesn't exist or has been moved." }}</p>
     <ul>
-      <li><a href="/">Back to the homepage</a></li>
-      <li><a href="/connection-guide/">Connection guide</a></li>
-      <li><a href="/bgp-communities/">BGP communities reference</a></li>
-      <li><a href="/contact/">Contact us</a></li>
+      <li><a href="{{ "/" | relLangURL }}">{{ partial "T.html" "Back to the homepage" }}</a></li>
+      <li><a href="{{ "/connection-guide/" | relLangURL }}">{{ partial "T.html" "Connection guide" }}</a></li>
+      <li><a href="{{ "/bgp-communities/" | relLangURL }}">{{ partial "T.html" "BGP communities reference" }}</a></li>
+      <li><a href="{{ "/contact/" | relLangURL }}">{{ partial "T.html" "Contact us" }}</a></li>
     </ul>
   </div>
 </article>

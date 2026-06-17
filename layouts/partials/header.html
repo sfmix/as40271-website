@@ -1,21 +1,41 @@
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="{{ "/" | relURL }}">
+    <a class="brand" href="{{ "/" | relLangURL }}">
       <img src="{{ "img/sfmix-logo.png" | relURL }}" alt="SFMIX" class="brand__logo" width="128" height="32">
       <span class="brand__sep"></span>
       <span class="brand__asn">{{ .Site.Params.asn }}</span>
       <span class="brand__host">· ip.sfmix.org</span>
     </a>
-    <button class="nav-toggle" aria-label="Menu" onclick="this.nextElementSibling.classList.toggle('open')">
+    <button class="nav-toggle" aria-label="{{ partial "T.html" "Menu" }}" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav">
       <ul>
         {{- range .Site.Menus.main }}
         <li>
-          <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ .Name }}</a>
+          <a href="{{ if hasPrefix .URL "http" }}{{ .URL }}{{ else }}{{ .URL | relLangURL }}{{ end }}"{{ if $.IsMenuCurrent "main" . }} class="is-active"{{ end }}>{{ partial "T.html" .Name }}</a>
         </li>
         {{- end }}
+        {{/* Language picker — native names only (never translated), same
+             convention as sfmix.org. Native <details> disclosure so it needs no
+             inline JS (CSP-safe); site.js wires the localStorage handlers. */}}
+        {{- $cur := .Site.Language.Lang }}
+        {{- $trans := dict }}
+        {{- range .AllTranslations }}{{ $trans = merge $trans (dict .Language.Lang .RelPermalink) }}{{ end }}
+        <li class="lang-picker">
+          <details>
+            <summary aria-label="{{ partial "T.html" "Change language" }}">{{ .Site.Language.LanguageName }}</summary>
+            <ul class="lang-menu">
+              {{- range .Site.Languages }}
+              {{- $url := index $trans .Lang }}
+              {{- if not $url }}{{ $url = cond (eq .Lang "en") "/" (printf "/%s/" .Lang) }}{{ end }}
+              <li>
+                <a class="lang-option{{ if eq .Lang $cur }} is-active{{ end }}" data-lang="{{ .Lang }}" hreflang="{{ .LanguageCode | default .Lang }}" href="{{ $url }}">{{ .LanguageName }}</a>
+              </li>
+              {{- end }}
+            </ul>
+          </details>
+        </li>
       </ul>
     </nav>
   </div>

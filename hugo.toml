@@ -1,19 +1,68 @@
 baseURL      = "https://ip.sfmix.org/"
-languageCode = "en-us"
 title        = "AS40271 — SFMIX IP Network"
 
 # Match the main sfmix.org build pattern.
 enableRobotsTXT = false
 enableEmoji     = false
 
+# --- Internationalization -------------------------------------------------
+# Same pattern as sfmix.org: English at the root (/), every other language in
+# its own subtree (/es/, /de/, /pirate/, /genz/). UI chrome is translated
+# gettext-style via the T partial (English source string IS the key; per-locale
+# catalogs in i18n/<lang>.toml; missing strings fall back to English). Page
+# prose is translated as whole Markdown files (content/<page>.<lang>.md).
+# Novelty locales use distinct base keys (pirate/genz) because Hugo collapses
+# en-* i18n filenames onto the empty "en" bundle; languageCode stays "en".
+defaultContentLanguage         = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-US"
+    weight       = 1
+    title        = "AS40271 — SFMIX IP Network"
+    [languages.en.params]
+      description = "AS40271 — opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX."
+  [languages.es]
+    languageName = "Español"
+    languageCode = "es-ES"
+    weight       = 2
+    title        = "AS40271 — SFMIX IP Network"
+    [languages.es.params]
+      description = "AS40271 — cooperativa de caché y contenido de adhesión voluntaria para ISP de acceso (eyeball) locales en el Área de la Bahía de San Francisco. Operada por SFMIX."
+  [languages.de]
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    weight       = 3
+    title        = "AS40271 — SFMIX IP Network"
+    [languages.de.params]
+      description = "AS40271 — Opt-in-Caching- und Content-Genossenschaft für lokale Endkunden-ISPs (Eyeball) in der San Francisco Bay Area. Betrieben von SFMIX."
+  [languages.pirate]
+    languageName = "Pirate"
+    languageCode = "en"
+    weight       = 4
+    title        = "AS40271 — Th' SFMIX IP Network"
+    [languages.pirate.params]
+      description = "AS40271 — an opt-in cache an' content cooperative for local eyeball ISPs in th' San Francisco Bay Area. Run by SFMIX."
+  [languages.genz]
+    languageName = "Gen Z"
+    languageCode = "en"
+    weight       = 5
+    title        = "AS40271 — the SFMIX IP Network fr"
+    [languages.genz.params]
+      description = "AS40271 — opt-in caching & content co-op for local eyeball ISPs in the SF Bay Area, run by SFMIX. lowkey lower transit bills, no cap."
+
 [params]
-  description = "AS40271 — opt-in caching & content cooperative for local eyeball ISPs in the San Francisco Bay Area. Operated by SFMIX."
   asn         = "AS40271"
   peeringdb   = "https://www.peeringdb.com/asn/40271"
   parentSite  = "https://sfmix.org"
   contactEmail = "tech-c@sfmix.org"
   nocPhone     = "+1 (415) 851-3469"
 
+# One menu, shared across all languages (top-level config cascades into every
+# language). Labels are the English source text, translated in the template via
+# the T partial; URLs are localized at render time with relLangURL.
 [menu]
   [[menu.main]]
     name   = "Home"
