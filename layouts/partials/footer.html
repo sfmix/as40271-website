@@ -26,7 +26,7 @@
   </div>
   <div class="container site-footer__legal">
     <span>© {{ now.Year }} {{ partial "T.html" "San Francisco Metropolitan Internet eXchange · IRS 501(c)(12) cooperative" }}</span>
-    {{/* Privacy policy is English-only; link to the canonical /privacy/ for every locale. */}}
-    <span><a href="{{ "/privacy/" | relURL }}">{{ partial "T.html" "Privacy" }}</a> · {{ partial "T.html" "Part of" }} <a href="{{ .Site.Params.parentSite }}">sfmix.org</a></span>
+    {{/* Privacy is governed by the canonical SFMIX policy at sfmix.org/privacy/. */}}
+    <span><a href="https://sfmix.org/privacy/" target="_blank" rel="noopener">{{ partial "T.html" "Privacy" }}</a> · {{ partial "T.html" "Part of" }} <a href="{{ .Site.Params.parentSite }}">sfmix.org</a></span>
   </div>
 </footer>
