@@ -1,13 +1,13 @@
 ---
 title: "BGP Communities"
-description: "Reference for AS40271 BGP communities — informational tags and traffic-engineering actions. The full rundown."
+description: "reference for AS40271 BGP communities — informational tags and traffic-engineering actions. the full rundown 🤓"
 ---
 
-BGP communities used by AS40271. **[Informational](#informational)** communities get tagged on ingestion and are never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate.
+BGP communities used by AS40271. **[Informational](#informational)** communities get tagged on ingestion and are never accepted from outside. **[Action](#action)** communities are accepted from downstreams to control how routes propagate. that's the tea ☕.
 
-## Informational
+## informational 🏷️
 
-Set by AS40271 on every route as it enters our network. Clutch for diagnostics; ignore them on your side or filter on them however you like.
+set by AS40271 on every route as it enters our network. clutch for diagnostics 🔍; ignore them on your side or filter on them however you like.
 
 ### Internal route marker
 
@@ -52,9 +52,9 @@ Set by AS40271 on every route as it enters our network. Clutch for diagnostics; 
 | `40271:1984:7` | SJC02 | 55 S Market St., San Jose (CoreSite) |
 | `40271:1984:8` | SCL05 | 2805 Lafayette St., Santa Clara (Digital Realty) |
 
-## Action
+## action ⚙️
 
-Set these communities on routes you announce to AS40271 and we'll act on them. These are the only communities we honor on ingress, periodt.
+set these communities on routes you announce to AS40271 and we'll act on them. these are the only communities we honor on ingress, periodt 💅.
 
 ### Don't propagate to a specific ASN — `40271:2000:<asn>`
 
@@ -76,7 +76,7 @@ Set these communities on routes you announce to AS40271 and we'll act on them. T
 |---|---|---|
 | `40271:2666:666` | Blackhole | Discard ingress traffic toward this prefix at AS40271's edge. /32 (v4) or /128 (v6) only. |
 
-## Quick reference
+## quick reference 📋
 
 ```
 # Suppress this prefix from being announced to AS15169
